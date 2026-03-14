@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Artist Portfolio</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #fff;
+  color: #111;
+}
+
+/* HERO */
+
+header {
+  text-align: center;
+  padding: 160px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+h1 {
+  font-size: 72px;
+  margin: 0;
+  font-weight: normal;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+/* SECTIONS */
+
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 100px 20px;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* PROFILE */
+
+.profile-pic {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 25px auto;
+}
+
+/* GALLERY */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 50px;
+}
+
+.art-card img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.art-card img:hover {
+  transform: scale(1.02);
+}
+
+.art-info {
+  margin-top: 10px;
+  font-size: 15px;
+  text-align: center;
+  color: #444;
+}
+
+/* CONTACT */
+
+.contact {
+  text-align: center;
+  font-size: 18px;
+}
+
+.whatsapp {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 28px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* LIGHTBOX */
+
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.96);
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 92%;
+  max-height: 92%;
+}
+
+footer {
+  text-align: center;
+  padding: 50px;
+  border-top: 1px solid #eee;
+  color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Sacipriya/ Ai Li Sun</h1>
+  <p class="subtitle">Contemporary Artist</p>
+</header>
+
+<section class="section">
+  <h2>About the Artist</h2>
+
+  <img src="profile.jpeg" class="profile-pic">
+
+  <p style="text-align:center; max-width:700px; margin:auto;">
+    Write a refined biography describing artistic journey,
+    influences, themes, and philosophy.
+  </p>
+</section>
+
+<section class="section">
+  <h2>Selected Works</h2>
+
+  <div class="gallery">
+
+    <div class="art-card">
+      <img src="art1.jpeg" onclick="openImg(this)">
+      <div class="art-info">Title — 2024</div>
+    </div>
+
+    <div class="art-card">
+      <img src="art2.jpeg" onclick="openImg(this)">
+      <div class="art-info">Title — 2023</div>
+    </div>
+
+    <div class="art-card">
+      <img src="art3.jpeg" onclick="openImg(this)">
+      <div class="art-info">Title — 2022</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2>Complete Portfolio</h2>
+
+  <div class="gallery">
+
+    <div class="art-card">
+      <img src="art4.jpeg" onclick="openImg(this)">
+    </div>
+
+    <div class="art-card">
+      <img src="art5.jpeg" onclick="openImg(this)">
+    </div>
+
+    <div class="art-card">
+      <img src="art6.jpeg" onclick="openImg(this)">
+    </div>
+     <div class="art-card">
+  <img src="art7.jpeg" onclick="openImg(this)">
+</div>
+
+<div class="art-card">
+  <img src="art8.jpeg" onclick="openImg(this)">
+</div>
+
+<div class="art-card">
+  <img src="art9.jpeg" onclick="openImg(this)">
+</div>
+
+<div class="art-card">
+  <img src="art10.jpeg" onclick="openImg(this)">
+</div>
+
+<div class="art-card">
+  <img src="art11.jpeg" onclick="openImg(this)">
+</div>
+
+<div class="art-card">
+  <img src="art12.jpeg" onclick="openImg(this)">
+</div>
+
+<div class="art-card">
+  <img src="art13.jpeg" onclick="openImg(this)">
+</div>
+
+<div class="art-card">
+  <img src="art14.jpeg" onclick="openImg(this)">
+</div>
+<div class="art-card">
+  <img src="art15.jpeg" onclick="openImg(this)">
+</div>
+  </div>
+</section>
+
+<section class="section contact">
+  <h2>Contact</h2>
+
+  <p>Email: spdd_tkg@yahoo.com</p>
+  <p>Phone: +91 9775340755</p>
+
+  <a class="whatsapp"
+     href="https://wa.me/919775340755"
+     target="_blank">
+     Contact via WhatsApp
+  </a>
+</section>
+
+<footer>
+  © 2026 Sacipriya/Ai Li Sun
+</footer>
+
+<div id="lightbox" onclick="closeImg()">
+  <img id="lightbox-img">
+</div>
+
+<script>
+function openImg(img){
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = img.src;
+}
+
+function closeImg(){
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>
