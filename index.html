@@ -59,6 +59,8 @@ h1 {
 
 /* GALLERY */
 
+/* GALLERY RESET */
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -75,14 +77,6 @@ h1 {
 .art-card img:hover {
   transform: scale(1.02);
 }
-
-.art-info {
-  margin-top: 10px;
-  font-size: 15px;
-  text-align: center;
-  color: #444;
-}
-
 /* CONTACT */
 
 .contact {
@@ -142,8 +136,13 @@ footer {
   <img src="profile.jpeg" class="profile-pic">
 
   <p style="text-align:center; max-width:700px; margin:auto;">
-    Write a refined biography describing artistic journey,
-    influences, themes, and philosophy.
+  <p style="text-align:center; max-width:700px; margin:auto;">
+Sacipriya, also known as Ai Li Sun, is a contemporary artist whose work explores the intersection of spirituality, emotion, and nature. Her paintings are deeply inspired by devotional themes, inner reflection, and the subtle beauty of the natural world.
+
+Working primarily with acrylics, she creates compositions that evoke stillness, movement, and transcendence. Each piece carries a meditative quality, inviting the viewer into a space of contemplation and connection.
+
+Her artistic journey reflects a synthesis of Eastern spiritual philosophy and expressive visual language, resulting in works that are both intimate and expansive.
+</p>
   </p>
 </section>
 
@@ -283,3 +282,15 @@ function closeImg(){
 
 </body>
 </html>
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
